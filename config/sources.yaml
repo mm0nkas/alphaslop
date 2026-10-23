@@ -1,0 +1,28 @@
+# Источники новостей. Новый источник = новая строка, код менять не нужно.
+# Адреса RSS проверены вручную автором проекта.
+settings:
+  user_agent: "alfa-hack-research-bot/0.1 (student hackathon)"
+  delay_seconds: 1.0        # пауза между запросами к сайтам
+  per_source_limit: 50      # максимум записей из одной ленты за прогон
+  min_text_chars: 200       # короче этого текст считаем неполным
+
+sources:
+  - name: cbr
+    title: Банк России
+    type: rss
+    url: "https://www.cbr.ru/rss/eventrss"   # ЗАМЕНИТЕ на ваш проверенный адрес ЦБ
+
+  - name: interfax
+    title: Интерфакс
+    type: rss
+    url: "https://www.interfax.ru/rss.asp"
+
+  - name: rbc
+    title: РБК
+    type: rss
+    url: "https://rssexport.rbc.ru/rbcnews/news/30/full.rss"
+
+  - name: kommersant
+    title: Коммерсантъ
+    type: rss
+    url: "https://www.kommersant.ru/RSS/news.xml"
